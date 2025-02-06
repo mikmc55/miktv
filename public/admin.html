@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Settings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-4xl mx-auto p-4">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold">Admin Settings</h1>
+            <a href="/" class="bg-blue-500 text-white px-4 py-2 rounded">Back to Dashboard</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold mb-4">Change Admin Credentials</h2>
+            
+            <form id="adminForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-1">New Username</label>
+                    <input type="text" name="newUsername" class="w-full px-3 py-2 border rounded" />
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium mb-1">New Password</label>
+                    <input type="password" name="newPassword" class="w-full px-3 py-2 border rounded" />
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium mb-1">Current Password (Required)</label>
+                    <input type="password" name="currentPassword" required class="w-full px-3 py-2 border rounded" />
+                </div>
+
+                <div id="errorMessage" class="text-red-500 hidden"></div>
+                <div id="successMessage" class="text-green-500 hidden"></div>
+                
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
+                    Update Credentials
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="/js/admin.js"></script>
+</body>
+</html>
